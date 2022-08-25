@@ -52,7 +52,7 @@ export default function RestaurantOverview({ bg }) {
     let { order } = data;
 
     var options = {
-      key: process.env.REACT_APP_KEY_ID,
+      key: "rzp_test_Gaer6wsOr2pz3k",
       amount: order.amount,
       currency: "INR",
       name: "Zomato Clone Payment",
