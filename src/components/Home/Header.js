@@ -132,7 +132,7 @@ export default function Header() {
                     onChange={getResList}
                     disabled={resDisable}
                   />
-                  <div className="list-group position-relative cursor-pointer testingZ">
+                  <div className="list-group position-relative cursor-pointer w-100 ms-1">
                     {restaurantList.map((res) => {
                       return (
                         <li
