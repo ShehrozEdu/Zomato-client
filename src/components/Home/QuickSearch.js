@@ -26,7 +26,7 @@ export default function QuickSearch() {
   }, []);
   return (
     <>
-      <section className="row justify-content-center m-0 mt-5">
+      <section className="row justify-content-center m-0 mt-lg-5 mt-md-4 mt-0">
         <section className="col-lg-11 col-10 mt-3">
           <h3 className="fw-bold indexColor">Quick Searches</h3>
           <p className="text-secondary">Discover restaurants by type of meal</p>
