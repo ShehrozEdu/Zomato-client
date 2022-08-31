@@ -7,7 +7,7 @@ export default function QuickSearch() {
   let [mealType, setMealType] = useState([]);
 
   let quickSearchData = async () => {
-    let url = "http://localhost:4000/api/get-meal-types";
+    let url = "https://zomato-clone-532.herokuapp.com/api/get-meal-types";
 
     try {
       let response = await axios.get(url);
