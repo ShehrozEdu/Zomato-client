@@ -30,7 +30,7 @@ export default function Header() {
       return false;
     }
     let url =
-      "https://zomato-clone-532.herokuapp.com/api/get-location-by-city-name?city=" + city;
+      "http://localhost:4000/api/get-location-by-city-name?city=" + city;
 
     try {
       let response = await axios.get(url);
@@ -56,7 +56,7 @@ export default function Header() {
 
       return false;
     }
-    let url = `https://zomato-clone-532.herokuapp.com/api/get-restaurant-by-location-id?lid=${selectLocation.location_id}&rest=${restaurant}`;
+    let url = `http://localhost:4000/api/get-restaurant-by-location-id?lid=${selectLocation.location_id}&rest=${restaurant}`;
 
     try {
       let response = await axios.get(url);
@@ -75,9 +75,9 @@ export default function Header() {
     <>
       <section>
         <div className="bg__image ">
-          <Navbar bg="" />
+          <Navbar bg="" login="" />
           {/* <!-- =====LOGO======= --> */}
-          <div className="d-lg-flex justify-content-center d-md-flex d-none">
+          <div className="d-lg-flex justify-content-center d-md-flex d-none mainE">
             <h1 className="mt-4 mb-lg-0 mb-2 logo d-flex p-0 justify-content-center align-items-center fw-bold bg-white rounded-circle">
               e!
             </h1>
@@ -91,9 +91,9 @@ export default function Header() {
           {/* <!-- ======SEARCh Location====== --> */}
 
           <div className="row d-flex justify-content-center">
-            <div className="col-lg-5 col-11  ">
+            <div className="col-lg-6 col-md-7 col-10  ">
               <div className="row d-flex mb-lg-5 position-absolute m-0">
-                <div className="col-lg-4 col-11 left-search__main ms-lg-5 position-relative">
+                <div className="col-lg-5 col-11 left-search__main ms-lg-5 position-relative">
                   <input
                     list="locations"
                     type="text"
@@ -120,19 +120,20 @@ export default function Header() {
                   </div>
                 </div>
                 {/* // <!-- ======(Restaurant)====== --> */}
-                <div className="col-lg-7 mt-2 mt-lg-0 col-11 right-search__main ">
+                <div className="col-lg-6 mt-2 mt-lg-0 col-11 ">
                   <i
                     className="bx bx-search-alt-2 search__logo ms-3 position-absolute text-muted fs-4"
                     aria-hidden="true"
                   ></i>
                   <input
                     type="text"
-                    className="form-control p-3 ps-5 ms-1 location__input"
+                    className="form-control p-3 ps-5 ms-1 "
                     placeholder="Search for Restaurants"
+                    onClick={getResList}
                     onChange={getResList}
                     disabled={resDisable}
                   />
-                  <div className="list-group position-relative cursor-pointer w-100 ms-1">
+                  <div className="list-group position-relative cursor-pointer ms-1 Zindex">
                     {restaurantList.map((res) => {
                       return (
                         <li

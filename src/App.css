@@ -129,7 +129,7 @@ body {
 
 .filter {
   width: 20vw;
-  height: 120vh;
+  height: 120vh !important;
   border-radius: 1rem;
 }
 .test {
@@ -143,7 +143,7 @@ body {
 }
 
 .box {
-  height: 45vh;
+  height: 50vh;
   width: 55vw;
   border-radius: 10px;
 }
@@ -211,6 +211,9 @@ body {
 .marginSearch {
   margin-left: 23rem;
 }
+.marginLeft {
+  margin-left: 17rem !important;
+}
 .btnOrder {
   background-color: var(--second-color);
   color: white;
@@ -236,15 +239,301 @@ body {
   right: 35%;
   height: 30px;
 }
+.menu-img {
+  width: 9vw !important;
+  height: 16vh;
+}
 /* ---------------------------------------------------------------- */
-/* Media-breakpoints */
+/* MEDIA QUERIES FOR MEDIUM DEVICES */
+/* ---------------------------------------------------------------- */
+@media only screen and (min-width: 865px) and (max-width: 991px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+    color: var(--second-color);
+    font-size: 2.06rem;
+  }
+  .secondLogo {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  .mainE {
+    display: none !important;
+  }
+
+  .login__div {
+    font-size: 1rem;
+  }
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+  .btn-main {
+    margin-left: 30px;
+  }
+  .hrline {
+    width: 90vw;
+    margin-left: 1rem;
+  }
+  .quick-search-item {
+    width: auto;
+  }
+  .image-item {
+    width: 30vw;
+    height: 20vh;
+  }
+  .bg__image {
+    width: 100vw;
+    height: 80vh;
+    background-position-x: center;
+    background-position-y: initial;
+    background-size: 130%;
+  }
+  .heightLi {
+    height: 30vh !important;
+  }
+  .quick-search-item {
+    margin-left: 3rem;
+    width: 80% !important;
+    margin-bottom: 8px;
+  }
+  .header {
+    height: 90px !important;
+  }
+  .filter {
+    width: 82vw;
+    height: 130vh !important;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+  .searchResultFilterBox {
+    width: 83vw;
+    margin-left: 1.5rem;
+    height: 45vh;
+  }
+  .hrline {
+    width: 73vw;
+  }
+  .header__text {
+    font-size: 4vw;
+    margin-top: 3rem;
+  }
+  .resOverviewImg {
+    height: 100%;
+    width: 100%;
+  }
+  .marZero {
+    margin: 0 !important;
+  }
+  .marginLeft {
+    margin-left: 10rem !important;
+  }
+  .marginSearch {
+    margin-left: 10rem;
+  }
+  .box__section {
+    width: 60vw !important;
+    margin-left: 30px;
+    height: 25vh;
+  }
+  .box__section img {
+    width: 20vw;
+    height: 25vh;
+  }
+  .cuisine {
+    line-height: 30px;
+  }
+  .restOverviewImgContainer {
+    height: 60vh;
+    width: 83vw;
+  }
+  .resOverviewImg {
+    height: 100%;
+    width: 100%;
+  }
+  .marginContainer {
+    margin-left: 40px;
+  }
+  .resOverviewBtn {
+    top: 58%;
+    right: 10%;
+  }
+  .widthMod {
+    width: 120vw !important;
+    height: 70vh;
+  }
+  .orderDiv {
+    margin-left: rem;
+  }
+  .btnOrder {
+    margin-bottom: 1rem;
+    /* margin-left: 4rem !important; */
+  }
+  .testingZ {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: 96%;
+  }
+  .ZIndex {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: 90%;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* MEDIA QUERIES FOR MEDIUM DEVICES(509-864) */
 /* ---------------------------------------------------------------- */
 
-@media only screen and (max-width: 812px) {
-  .box {
-    height: 35vh;
-    width: 100vw;
+@media screen and (min-width: 509px) and (max-width: 864px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+    color: var(--second-color);
+    font-size: 2.06rem;
   }
+  .secondLogo {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  .mainE {
+    display: none !important;
+  }
+
+  .login__div {
+    font-size: 1rem;
+  }
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+  .btn-main {
+    margin-left: 30px;
+  }
+  .hrline {
+    width: 90vw;
+    margin-left: 1rem;
+  }
+  .quick-search-item {
+    width: auto;
+  }
+  .image-item {
+    width: 30vw;
+    height: 20vh;
+  }
+  .bg__image {
+    width: 100vw;
+    height: 80vh;
+    background-position-x: center;
+    background-position-y: initial;
+    background-size: 199%;
+  }
+  .heightLi {
+    height: 30vh !important;
+  }
+  .quick-search-item {
+    margin-left: 3rem;
+    width: 80% !important;
+    margin-bottom: 8px;
+  }
+  .header {
+    height: 90px !important;
+  }
+  .filter {
+    width: 82vw;
+    height: 130vh !important;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+  .searchResultFilterBox {
+    width: 83vw;
+    margin-left: 1.5rem;
+    height: 45vh;
+  }
+  .hrline {
+    width: 73vw;
+  }
+  .header__text {
+    font-size: 5vw;
+    margin-top: 3rem;
+  }
+  .resOverviewImg {
+    height: 100%;
+    width: 100%;
+  }
+  .marZero {
+    margin: 0 !important;
+  }
+  .marginLeft {
+    margin-left: 7rem !important;
+  }
+  .marginSearch {
+    margin-left: 2rem;
+  }
+  .box__section {
+    /* width: 80vw !important; */
+    margin-left: 30px;
+    height: 20vh;
+  }
+  .box__section img {
+    width: 20vw;
+    height: 20vh;
+  }
+  .cuisine {
+    line-height: 30px;
+  }
+  .restOverviewImgContainer {
+    height: 50vh;
+    width: 83vw;
+  }
+  .resOverviewImg {
+    height: 100%;
+    width: 100%;
+  }
+  .marginContainer {
+    margin-left: 40px;
+  }
+  .resOverviewBtn {
+    top: 58%;
+    right: 10%;
+  }
+  .widthMod {
+    width: 120vw !important;
+    height: 70vh;
+  }
+  .orderDiv {
+    margin-left: rem;
+  }
+  .btnOrder {
+    margin-bottom: 1rem;
+    /* margin-left: 4rem !important; */
+  }
+  .testingZ {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: 96%;
+  }
+  .ZIndex {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: 90%;
+  }
+}
+/* ---------------------------------------------------------------- */
+/* MEDIA QUERIES FOR SMALL DEVICES */
+/* ---------------------------------------------------------------- */
+
+@media only screen and (max-width: 508px) {
   .logo {
     width: 60px;
     height: 60px;
@@ -300,7 +589,7 @@ body {
   }
   .filter {
     width: 82vw;
-    height: 110vh;
+    height: 130vh !important;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -324,6 +613,12 @@ body {
   .marZero {
     margin: 0 !important;
   }
+  .marginLeft {
+    margin-left: 7rem !important;
+  }
+  .marginSearch {
+    margin-left: 2rem;
+  }
   .box__section {
     /* width: 80vw !important; */
     margin-left: 30px;
@@ -338,6 +633,7 @@ body {
   .resOverviewImg {
     height: 100%;
     width: 100%;
+    margin-left: 1rem;
   }
   .marginContainer {
     margin-left: 40px;

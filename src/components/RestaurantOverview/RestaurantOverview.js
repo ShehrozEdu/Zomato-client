@@ -18,8 +18,8 @@ export default function RestaurantOverview({ bg }) {
   //constants
   const params = useParams();
   const emailRef = useRef();
-  const addressRef = useRef();
-  const nameRef = useRef();
+  // const addressRef = useRef();
+  // const nameRef = useRef();
 
   //Payment
   let loadScript = async () => {
@@ -41,7 +41,7 @@ export default function RestaurantOverview({ bg }) {
       return false;
     }
 
-    let URL = "https://zomato-clone-532.herokuapp.com/api/payment";
+    let URL = "http://localhost:4000/api/payment";
 
     let sendData = {
       amount: subTotal,
@@ -50,9 +50,9 @@ export default function RestaurantOverview({ bg }) {
 
     let { data } = await axios.post(URL, sendData);
     let { order } = data;
-
+    // console.log(data);
     var options = {
-      key: "rzp_test_Gaer6wsOr2pz3k",
+      key: process.env.REACT_APP_KEY_ID,
       amount: order.amount,
       currency: "INR",
       name: "Zomato Clone Payment",
@@ -61,7 +61,7 @@ export default function RestaurantOverview({ bg }) {
         "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zomato_Logo.jpg",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "https://zomato-clone-532.herokuapp.com/api/callback";
+        let URL = "http://localhost:4000/api/callback";
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,
@@ -92,9 +92,7 @@ export default function RestaurantOverview({ bg }) {
   };
 
   let getRestDetails = async () => {
-    let URL =
-      "https://zomato-clone-532.herokuapp.com/api/get-restaurant-by-id/" +
-      params.id;
+    let URL = "http://localhost:4000/api/get-restaurant-by-id/" + params.id;
     try {
       let response = await axios.get(URL);
 
@@ -116,9 +114,7 @@ export default function RestaurantOverview({ bg }) {
   }, []);
 
   let getMenuData = async () => {
-    let URL =
-      "https://zomato-clone-532.herokuapp.com/api/get-menu-item/?rid=" +
-      params.id;
+    let URL = "http://localhost:4000/api/get-menu-item/?rid=" + params.id;
 
     try {
       let response = await axios.get(URL);
@@ -273,7 +269,7 @@ export default function RestaurantOverview({ bg }) {
                               </div>
                               <div className="col-4">
                                 <div className="background-clr  d-flex justify-content-end position-relative mt-4 ">
-                                  <img src={"/images/" + item.image} alt="" />
+                                  <img src={"/images/" + item.image} alt="" className="menu-img" />
                                   {item.qty === 0 ? (
                                     <button
                                       className="btn btn-sm btnAdd position-absolute bg-white border-dark fourthColor "
@@ -361,7 +357,7 @@ export default function RestaurantOverview({ bg }) {
                           </label>
                           <input
                             type="text"
-                            ref={nameRef}
+                            // ref={nameRef}
                             className="form-control"
                             id="exampleFormControlInput1"
                             placeholder="Enter your Name"
@@ -395,7 +391,7 @@ export default function RestaurantOverview({ bg }) {
                             className="form-control"
                             id="exampleFormControlTextarea1"
                             rows="3"
-                            ref={addressRef}
+                            // ref={addressRef}
                             placeholder="Enter Your Address"
                             required
                           ></textarea>

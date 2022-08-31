@@ -22,16 +22,16 @@ export default function SearchResult({ searchList }) {
                 alt="breakfast"
               />
               <div className="cursor-pointer">
-                <h2 className=" fw-bold mx-3 mb-2 mt-3   indexColor">
+                <h2 className=" fw-bold mx-3 mb-2 mt-3   indexColor restNameText">
                   {item.name}
                 </h2>
-                <div className="d-flex flex-column mx-3  ">
-                  <div className="indexColor fw-bold ">
+                <div className="d-flex flex-column mx-3 ">
+                  <div className="indexColor fw-bold ratingText ">
                     <p className="my-lg-2 my-1">
                       Rating: {item.aggregate_rating}
                     </p>
                   </div>
-                  <div className="thirdColor">
+                  <div className="thirdColor localityCity">
                     <p>
                       {item.locality},{item.city}
                     </p>

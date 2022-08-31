@@ -7,17 +7,19 @@ export default function SearchFilterBox({ location, filterData }) {
         className="shadow p-4 filter  panel-collapse collapse show"
         id="collapse1"
       >
-        <p className="fw-bold fs-5 my-2 indexColor">Filters</p>{" "}
+        <p className="fw-bold fs-5 my-2 indexColor">Filters</p>
         <label htmlFor="location" className="my-2">
           Select a Location
         </label>
         <br />
         <div>
           <select
-            className="form-select form-select-sm"
+            className="form-select form-select-sm selectLocationDropdown"
             onChange={(e) => filterData(e, "location")}
           >
-            <option value="">Select a Location</option>
+            <option className="" value="">
+              Select a Location
+            </option>
             {location.map((loc, index) => {
               return (
                 <option key={index} value={loc.location_id}>
@@ -147,23 +149,23 @@ export default function SearchFilterBox({ location, filterData }) {
         <p className="fw-bold my-4 indexColor">Sort</p>
         <input
           type="radio"
-          name="low-high"
+          name="sort"
           id="low-high"
           value="1"
           onChange={(event) => filterData(event, "sort")}
         />
-        <label htmlFor="north" className="my-1 thirdColor ms-1">
+        <label htmlFor="low-high" className="my-1 thirdColor ms-1">
           Price low to high
         </label>
         <br />
         <input
           type="radio"
-          name="north"
+          name="sort"
           id="high-low"
           value="-1"
           onChange={(event) => filterData(event, "sort")}
         />
-        <label htmlFor="north" className="my-1 thirdColor ms-1">
+        <label htmlFor="high-low" className="my-1 thirdColor ms-1">
           Price high to low
         </label>
         <br />

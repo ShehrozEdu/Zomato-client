@@ -25,7 +25,7 @@ function SignUp({ success, error }) {
             </div>
             <div className="modal-body">
               <div className="row">
-                <div className="col-10 d-flex flex-column align-items-center py-3">
+                <div className="col-12 d-flex flex-column align-items-center py-3">
                   <GoogleLogin
                     onSuccess={(credentialResponse) => {
                       success(credentialResponse);

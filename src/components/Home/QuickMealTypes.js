@@ -22,7 +22,7 @@ export default function QuickMealTypes(props) {
         <img
           src={`./images/${meal.image}`}
           alt={meal.name}
-          className="image-item"
+          className="image-item img-fluid"
         />
         <div className="pt-3 px-2">
           <h4 className="indexColor fw-semibold">{meal.name}</h4>

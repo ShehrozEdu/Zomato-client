@@ -6,7 +6,7 @@ import SignUp from "../Users/Signup";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
 
-export default function Navbar({ bg }) {
+export default function Navbar({ bg, login }) {
   const navigate = useNavigate();
   const getHomepage = () => {
     navigate("/");
@@ -28,8 +28,19 @@ export default function Navbar({ bg }) {
   };
 
   let logout = () => {
-    localStorage.removeItem("auth_token");
-    window.location.reload();
+    Swal.fire({
+      title: "Are you sure to logout?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("auth_token");
+        window.location.reload();
+      }
+    });
   };
   useEffect(() => {
     let token = localStorage.getItem("auth_token");
@@ -64,7 +75,7 @@ export default function Navbar({ bg }) {
               </p>
             </div>
             {userLogin === null ? (
-              <div>
+              <div className={login}>
                 <div className="d-flex flex-row justify-content-end  pe-lg-5 pe-4 mt-2">
                   <button
                     className="btn mt-lg-3 me-lg-4 me-1  text-white mt-4 "

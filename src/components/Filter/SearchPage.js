@@ -15,7 +15,7 @@ export default function SearchPage() {
 
   let getFilterData = async (_filterObj) => {
     _filterObj = { ..._filterObj };
-    let URL = "https://zomato-clone-532.herokuapp.com/api/filter";
+    let URL = "http://localhost:4000/api/filter";
 
     if (searchParams.get("meal_type")) {
       _filterObj["mealtype"] = searchParams.get("meal_type");
@@ -35,7 +35,7 @@ export default function SearchPage() {
 
   let getLocationDropdownData = async () => {
     try {
-      let URL = "https://zomato-clone-532.herokuapp.com/api/get-location";
+      let URL = "http://localhost:4000/api/get-location";
       let response = await axios.get(URL);
       let { status, location } = response.data;
       if (status) {
@@ -108,7 +108,7 @@ export default function SearchPage() {
         <div className="row test">
           <div className="col-lg-11 col-10 ms-lg-5 ms-2 ps-0">
             <p className="fs-lg-1 fs-4 fw-bolder mx-lg-5 mx-4 my-4 indexColor">
-              Best Places in Mumbai
+              {`Best Places in ${location.city}`}
             </p>
 
             <div className="d-flex mx-lg-5 justify-content-between flex-lg-row flex-column">
