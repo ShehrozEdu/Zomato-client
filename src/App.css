@@ -287,11 +287,11 @@ body {
     height: 20vh;
   }
   .bg__image {
-    width: 100vw;
+    width: 98.3vw;
     height: 80vh;
     background-position-x: center;
     background-position-y: initial;
-    background-size: 130%;
+    background-size: 100%;
   }
   .heightLi {
     height: 30vh !important;
@@ -337,8 +337,8 @@ body {
     margin-left: 10rem;
   }
   .box__section {
-    width: 60vw !important;
-    margin-left: 30px;
+    width: 40vw !important;
+    margin-left: 5px;
     height: 25vh;
   }
   .box__section img {
@@ -431,11 +431,11 @@ body {
     height: 20vh;
   }
   .bg__image {
-    width: 100vw;
+    width: 97.5vw;
     height: 80vh;
     background-position-x: center;
     background-position-y: initial;
-    background-size: 199%;
+    background-size: 101%;
   }
   .heightLi {
     height: 30vh !important;
@@ -481,7 +481,7 @@ body {
     margin-left: 2rem;
   }
   .box__section {
-    /* width: 80vw !important; */
+    width: 43vw !important;
     margin-left: 30px;
     height: 20vh;
   }
@@ -570,7 +570,7 @@ body {
     height: 20vh;
   }
   .bg__image {
-    width: 100vw;
+    width: 96.5vw;
     height: 80vh;
     background-position-x: center;
     background-position-y: initial;
@@ -589,7 +589,7 @@ body {
   }
   .filter {
     width: 82vw;
-    height: 130vh !important;
+    height: 123vh !important;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -657,5 +657,9 @@ body {
     position: absolute !important;
     z-index: 100 !important;
     width: 93%;
+  }
+  .menu-img {
+    width: 28vw !important;
+    height: 12vh;
   }
 }
