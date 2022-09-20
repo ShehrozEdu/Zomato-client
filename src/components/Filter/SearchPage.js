@@ -114,7 +114,11 @@ export default function SearchPage() {
             <div className="d-flex mx-lg-5 justify-content-between flex-lg-row flex-column">
               <SearchFilterBox location={location} filterData={filterData} />
               <div>
-                <SearchResult searchList={searchList} />
+                {isLoading ? (
+                  <LoadingSkeleton searchList={searchList} />
+                ) : (
+                  <SearchResult searchList={searchList} />
+                )}
                 <FilterPagination
                   filterData={filterData}
                   pageCount={pageCount}
