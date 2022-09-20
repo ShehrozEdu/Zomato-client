@@ -7,25 +7,25 @@ import HomePage from "./components/Home/Homepage";
 import RestaurantOverview from "./components/RestaurantOverview/RestaurantOverview";
 import ProtectedRoutes from "./components/utils/PrivateRoutes";
 import LoginPage from "./components/Users/LoginPage";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/quick-search" element={<SearchPage />} />
+      <SkeletonTheme baseColor="#ffff" highlightColor="#cacaca">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/quick-search" element={<SearchPage />} />
 
-        <Route element={<ProtectedRoutes />}>
-          {/* <Route path="/quick-search" element={<SearchPage />} /> */}
-          <Route
-            path="/restaurant-overview/:id"
-            element={<RestaurantOverview />}
-          />
-        </Route>
-        <Route path="/login" element={<LoginPage />} />
-        {/*  */}
-        {/*  */}
-      </Routes>
+          <Route element={<ProtectedRoutes />}>
+            <Route
+              path="/restaurant-overview/:id"
+              element={<RestaurantOverview />}
+            />
+          </Route>
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </SkeletonTheme>
     </>
   );
 }

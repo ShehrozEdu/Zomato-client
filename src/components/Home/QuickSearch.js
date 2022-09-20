@@ -5,6 +5,7 @@ import QuickMealTypes from "./QuickMealTypes";
 
 export default function QuickSearch() {
   let [mealType, setMealType] = useState([]);
+  let [isLoading, SetIsLoading] = useState(true);
 
   let quickSearchData = async () => {
     let url = "https://zomato-clone-532.herokuapp.com/api/get-meal-types";
@@ -14,6 +15,7 @@ export default function QuickSearch() {
       let { status, meal_type } = response.data;
       if (status) {
         setMealType([...meal_type]);
+        SetIsLoading(false);
       } else {
         alert("MealType Not Found");
       }
@@ -37,7 +39,13 @@ export default function QuickSearch() {
           <section className="row py-2">
             <section className="col-12 px-0 d-flex flex-lg-row flex-md-row flex-column justify-content-between flex-wrap ">
               {mealType.map((meal) => {
-                return <QuickMealTypes meal={meal} key={meal._id} />;
+                return (
+                  <QuickMealTypes
+                    meal={meal}
+                    key={meal._id}
+                    isLoading={isLoading}
+                  />
+                );
               })}
             </section>
           </section>
