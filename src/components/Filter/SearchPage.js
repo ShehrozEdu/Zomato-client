@@ -13,6 +13,7 @@ export default function SearchPage() {
   let [searchParams] = useSearchParams();
   let [filterObj, setFilterObj] = useState({});
   let [pageCount, setPageCount] = useState(0);
+  let [isLoading, setIsLoading] = useState(true);
 
   let getFilterData = async (_filterObj) => {
     _filterObj = { ..._filterObj };
