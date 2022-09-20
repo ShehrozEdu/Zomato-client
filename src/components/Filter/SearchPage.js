@@ -5,6 +5,7 @@ import FilterPagination from "./FilterPagination";
 import Navbar from "../Nav/Navbar";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
+import LoadingSkeleton from "../utils/SkeletonLoading";
 
 export default function SearchPage() {
   let [searchList, setSearchList] = useState([]);
