@@ -3,6 +3,8 @@ import axios from "axios";
 
 import QuickMealTypes from "./QuickMealTypes";
 
+import HomepageSkeleton from "../utils/HomepageSkeleton";
+
 export default function QuickSearch() {
   let [mealType, setMealType] = useState([]);
   let [isLoading, SetIsLoading] = useState(true);
@@ -37,17 +39,21 @@ export default function QuickSearch() {
         </section>
         <section className="col-11">
           <section className="row py-2">
-            <section className="col-12 px-0 d-flex flex-lg-row flex-md-row flex-column justify-content-between flex-wrap ">
-              {mealType.map((meal) => {
-                return (
-                  <QuickMealTypes
-                    meal={meal}
-                    key={meal._id}
-                    isLoading={isLoading}
-                  />
-                );
-              })}
-            </section>
+            {isLoading ? (
+              <HomepageSkeleton />
+            ) : (
+              <section className="col-12 px-0 d-flex flex-lg-row flex-md-row flex-column justify-content-between flex-wrap ">
+                {mealType.map((meal) => {
+                  return (
+                    <QuickMealTypes
+                      meal={meal}
+                      key={meal._id}
+                      isLoading={isLoading}
+                    />
+                  );
+                })}
+              </section>
+            )}
           </section>
         </section>
       </section>
