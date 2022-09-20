@@ -40,10 +40,7 @@ export default function QuickSearch() {
         <section className="col-11">
           <section className="row py-2">
             {isLoading ? (
-            <div className="col-12 px-0 d-flex flex-lg-row flex-md-row flex-column justify-content-between flex-wrap ">
           <HomepageSkeleton />
-            <div>
-              
             ) : (
               <section className="col-12 px-0 d-flex flex-lg-row flex-md-row flex-column justify-content-between flex-wrap ">
                 {mealType.map((meal) => {
