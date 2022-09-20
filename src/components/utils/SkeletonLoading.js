@@ -1,74 +1,85 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
-const HomepageSkeleton = () => {
+const LoadingSkeleton = ({ searchList }) => {
   return (
     <>
-      <section className="px-0 d-flex box__section quick-search-item shadow mb-4 position-relative">
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
+      <div>
+        <div className="box p-2 shadow border cursor-pointer mb-4 searchResultFilterBox">
+          <div className="d-flex flex-row">
+            <Skeleton width={160} height={160} />
+            <div className="cursor-pointer">
+              <h2 className=" fw-bold mx-3 mb-2 mt-3   indexColor restNameText">
+                <Skeleton width={100} />
+              </h2>
+              <div className="d-flex flex-column mx-3 ">
+                <div className="indexColor fw-bold ratingText ">
+                  <p className="my-lg-2 my-1">
+                    <Skeleton width={400} />
+                  </p>
+                </div>
+                <div className="thirdColor localityCity">
+                  <p>
+                    <Skeleton width={300} />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hrline">
+            <hr />
+          </div>
+          <div className="d-flex flex-row ">
+            <div className="d-flex flex-column ms-3 fw-bold cuisine">
+              CUISINES: <br />
+              COST FOR TWO:
+            </div>
+            <div className="d-flex flex-column ms-3 fw-bold indexColor ms-5 bakery ">
+              <Skeleton width={100} />
+              <Skeleton width={100} />
+            </div>
+          </div>
         </div>
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
+      </div>
+      <div>
+        <div className="box p-2 shadow border cursor-pointer mb-4 searchResultFilterBox">
+          <div className="d-flex flex-row">
+            <Skeleton width={160} height={160} />
+            <div className="cursor-pointer">
+              <h2 className=" fw-bold mx-3 mb-2 mt-3   indexColor restNameText">
+                <Skeleton width={100} />
+              </h2>
+              <div className="d-flex flex-column mx-3 ">
+                <div className="indexColor fw-bold ratingText ">
+                  <p className="my-lg-2 my-1">
+                    <Skeleton width={400} />
+                  </p>
+                </div>
+                <div className="thirdColor localityCity">
+                  <p>
+                    <Skeleton width={300} />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hrline">
+            <hr />
+          </div>
+          <div className="d-flex flex-row ">
+            <div className="d-flex flex-column ms-3 fw-bold cuisine">
+              CUISINES: <br />
+              COST FOR TWO:
+            </div>
+            <div className="d-flex flex-column ms-3 fw-bold indexColor ms-5 bakery ">
+              <Skeleton width={100} />
+              <Skeleton width={100} />
+            </div>
+          </div>
         </div>
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
-        </div>
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
-        </div>
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
-        </div>
-        <Skeleton width={100} height={130} />
-
-        <div className="pt-3 px-2 ">
-          <h4 className="indexColor fw-semibold">
-            <Skeleton width={100} />
-          </h4>
-          <p className="small text-muted">
-            <Skeleton width={200} />
-          </p>
-        </div>
-      </section>
+      </div>
     </>
   );
 };
 
-export default HomepageSkeleton;
+export default LoadingSkeleton;
