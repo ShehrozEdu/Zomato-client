@@ -26,14 +26,12 @@ export default function SearchPage() {
       let response = await axios.post(URL, _filterObj);
       let { result, pageCount } = response?.data;
       setSearchList(...[result]);
+      setIsLoading(false);
       setPageCount(pageCount);
     } catch (error) {
       alert(error);
     }
   };
-  // useEffect(() => {
-  //   getFilterData();
-  // }, []);
 
   let getLocationDropdownData = async () => {
     try {
@@ -42,6 +40,7 @@ export default function SearchPage() {
       let { status, location } = response.data;
       if (status) {
         setLocation([...location]);
+        setIsLoading(false);
       } else {
         alert("Looks like Input is missing");
       }
@@ -110,7 +109,7 @@ export default function SearchPage() {
         <div className="row test">
           <div className="col-lg-11 col-10 ms-lg-5 ms-2 ps-0">
             <p className="fs-lg-1 fs-4 fw-bolder mx-lg-5 mx-4 my-4 indexColor">
-              {`Best Places in ${location.city}`}
+              {`Best Places in this Area`}
             </p>
 
             <div className="d-flex mx-lg-5 justify-content-between flex-lg-row flex-column">
