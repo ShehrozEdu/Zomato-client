@@ -30,7 +30,7 @@ export default function Header() {
       return false;
     }
     let url =
-      "https://zomato-clone-532.herokuapp.com/api/get-location-by-city-name?city=" + city;
+      "https://zomato-server.vercel.app/api/get-location-by-city-name?city=" + city;
 
     try {
       let response = await axios.get(url);
@@ -56,7 +56,7 @@ export default function Header() {
 
       return false;
     }
-    let url = `https://zomato-clone-532.herokuapp.com/api/get-restaurant-by-location-id?lid=${selectLocation.location_id}&rest=${restaurant}`;
+    let url = `https://zomato-server.vercel.app/api/get-restaurant-by-location-id?lid=${selectLocation.location_id}&rest=${restaurant}`;
 
     try {
       let response = await axios.get(url);

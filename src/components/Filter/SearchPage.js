@@ -17,7 +17,7 @@ export default function SearchPage() {
 
   let getFilterData = async (_filterObj) => {
     _filterObj = { ..._filterObj };
-    let URL = "https://zomato-clone-532.herokuapp.com/api/filter";
+    let URL = "https://zomato-server.vercel.app/api/filter";
 
     if (searchParams.get("meal_type")) {
       _filterObj["mealtype"] = searchParams.get("meal_type");
@@ -35,7 +35,7 @@ export default function SearchPage() {
 
   let getLocationDropdownData = async () => {
     try {
-      let URL = "https://zomato-clone-532.herokuapp.com/api/get-location";
+      let URL = "https://zomato-server.vercel.app/api/get-location";
       let response = await axios.get(URL);
       let { status, location } = response.data;
       if (status) {

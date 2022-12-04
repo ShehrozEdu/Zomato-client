@@ -10,7 +10,7 @@ export default function QuickSearch() {
   let [isLoading, SetIsLoading] = useState(true);
 
   let quickSearchData = async () => {
-    let url = "https://zomato-clone-532.herokuapp.com/api/get-meal-types";
+    let url = "https://zomato-server.vercel.app/api/get-meal-types";
 
     try {
       let response = await axios.get(url);
